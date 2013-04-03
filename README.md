@@ -42,6 +42,11 @@ Output:
 
 	faker <Fakefile> <items_count>
 
+Fakefile example:
+
+	prop 'name', :person_name
+	prop 'company', :company_name
+
 ### Examples
 
 	data = FG::generate do
