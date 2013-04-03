@@ -11,19 +11,19 @@ module FG
       @props = {}
       instance_eval &block
     end
-  
+    
     def prop name, type = :person_name
-      @props[name] = @types[type]
+      @props[name] = !@types[type].nil? ? @types[type] : type
     end
-  
+    
     def to_json *a
       data = {}
       @props.each do |name, type|
-        data[name] = type[] unless type.nil?
+        data[name] = if type.is_a? Proc then type[] else type end
       end
       data.to_json(*a)
     end
-  
+    
     def generate count
       data = Array.new count, self
       JSON.pretty_generate(data)

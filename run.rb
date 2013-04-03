@@ -10,6 +10,8 @@ puts data1
 
 data2 = FG::generate 3 do
   prop 'name'
+  prop 'image', 'http://lorempixel.com/124/124'
+  prop 'size', 10
 end
 
 puts data2
