@@ -31,7 +31,7 @@ module FG
     
     def initialize &block
       @props = {}
-      instance_eval &block
+      instance_eval &block unless block.nil?
     end
     
     def prop name, type = :person_name

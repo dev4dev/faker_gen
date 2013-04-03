@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
+source_root = File.expand_path("..", File.dirname(__FILE__))
+$:.unshift("#{source_root}/lib")
+require "faker_gen"
+
+def fail message
+  puts message
+  exit(1)
+end
+
+file = !ARGV[0].nil? ? ARGV[0] : 'Fakefile'
+count = !ARGV[1].nil? ? ARGV[1].to_i : 10
+fail "File #{file} does not exist" unless File.exists? file
+
+file_data = File.read file
+obj = FG::Obj.new
+begin
+  obj.instance_eval file_data
+  data = Array.new count, obj
+  puts JSON.pretty_generate(data)
+rescue
+  fail 'Error parsing input file'
+end

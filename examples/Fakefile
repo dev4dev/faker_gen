@@ -1,0 +1,2 @@
+prop 'name', :person_name
+prop 'company', :company_name

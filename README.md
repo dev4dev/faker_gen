@@ -26,7 +26,7 @@ Output:
 	lorem_sentence
 	lorem_paragraph
 
-### Usage
+### Gem usage
 	
 	data = FG::generate `items_count` do # items_count - default 10
 		prop 'prop_name', :prop_type
@@ -34,6 +34,13 @@ Output:
 	end
 	
 	data # JSON String
+
+### Bin usage
+
+**Fakefile** - object struct file (optional, default = Fakefile)  
+**items_count** - items count in array (optional, default = 10)
+
+	faker <Fakefile> <items_count>
 
 ### Examples
 
