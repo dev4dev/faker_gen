@@ -98,3 +98,7 @@ Output:
 	    "ok": "Maxime nobis nostrum consequatur assumenda dolores modi sit. Animi qui veniam alias est iusto maxime. Recusandae ipsum et quis."
 	  }
 	]
+
+### Copyright
+
+© 2013 [Alex Antonyuk](http://antonyuk.me)
