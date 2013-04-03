@@ -19,7 +19,7 @@ module FG
     def to_json *a
       data = {}
       @props.each do |name, type|
-        data[name] = if type.is_a? Proc then type[] else type end
+        data[name] = type.is_a?(Proc) ? type[] : type
       end
       data.to_json(*a)
     end
