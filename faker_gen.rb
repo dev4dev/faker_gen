@@ -25,11 +25,8 @@ module FG
     end
   
     def generate count
-      data = []
-      count.times do
-        data << self
-      end
-      return JSON.pretty_generate(data)
+      data = Array.new count, self
+      JSON.pretty_generate(data)
     end
   end
   
