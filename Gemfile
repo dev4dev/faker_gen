@@ -1,4 +1,4 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem "faker", "~> 1.1.2"
+gem "faker", "~> 3.2.0"

@@ -9,7 +9,7 @@ module FG
       :company_name => ->{Faker::Company.name},
       :company_slogan => ->{Faker::Company.catch_phrase},
       
-      :address => ->{Faker::Address.street_address(true)},
+      :address => ->{Faker::Address.street_address(include_secondary: true)},
       :address_country => ->{Faker::Address.country},
       :address_city => ->{Faker::Address.city},
       :address_zip => ->{Faker::Address.zip_code},

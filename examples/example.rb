@@ -1,4 +1,4 @@
-require_relative "lib/faker_gen"
+require_relative "../lib/faker_gen"
 
 puts FG::Obj.types
 
