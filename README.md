@@ -8,6 +8,7 @@
 
 Output:
 
+```text
  person_name
  company_name
  company_slogan
@@ -26,6 +27,7 @@ Output:
  lorem_word
  lorem_sentence
  lorem_paragraph
+```
 
 ## Bin usage
 
@@ -36,22 +38,27 @@ Output:
 
 Fakefile example:
 
- prop 'name', :person_name
- prop 'company', :company_name
+```ruby
+prop 'name', :person_name
+prop 'company', :company_name
+```
 
 ## Lib usage
 
- require 'faker_gen'
+```ruby
+require 'faker_gen'
 
- data = FG::generate `items_count` do # items_count - default 10
+data = FG::generate `items_count` do # items_count - default 10
   prop 'prop_name', :prop_type
   prop 'prop_name2', 'static value'
- end
+end
 
- data # JSON String
+data # JSON String
+```
 
 ## Examples
 
+```ruby
  data = FG::generate do
    prop 'owner'
    prop 'ceo', :person_name
@@ -61,9 +68,11 @@ Fakefile example:
  end
 
  puts data
+```
 
 Output:
 
+```json
  [
    {
      "owner": "Jace Okuneva",
@@ -78,21 +87,25 @@ Output:
      "company": "Kutch, Johnston and Tillman",
      "address": "10379 Adella Flat Apt. 945",
      "phone": "163.367.6717 x0484"
-   },…
+   }
  ]
+ ```
 
- data = FG::generate 3 do
+```ruby
+data = FG::generate 3 do
    prop 'name'
    prop 'image', '<http://lorempixel.com/124/124>'
    prop 'size', 10
    prop 'ok', :lorem_paragraph
- end
+end
 
- puts data
+puts data
+```
 
 Output:
 
- [
+```json
+[
    {
      "name": "Alison Smith",
      "image": "http://lorempixel.com/124/124",
@@ -111,7 +124,8 @@ Output:
      "size": 10,
      "ok": "Maxime nobis nostrum consequatur assumenda dolores modi sit. Animi qui veniam alias est iusto maxime. Recusandae ipsum et quis."
    }
- ]
+]
+```
 
 ### Copyright
 
